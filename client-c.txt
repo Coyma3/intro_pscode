@@ -2,3 +2,13 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+BEGIN CountPackages
+    SET maxPackages = 50
+    SET packageCount = 0
+    
+    PRINT "Counting packages from 2 to " + maxPackages + " (by twos):"
+    
+    FOR packageCount FROM 2 TO maxPackages 
+        PRINT packageCount
+    ENDFOR
+END CountPackages
