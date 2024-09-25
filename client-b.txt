@@ -2,3 +2,29 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+BEGIN MappingWalkingApp
+    SET currentLocation = (0, 0) // Starting point
+    SET targetLocation = GETTargetLocation() // Function to get the target location from the customer
+
+    WHILE currentLocation != targetLocation
+        PRINT "Current Location: " + currentLocation
+        PRINT "Enter direction (north, south, east, west):"
+        INPUT direction
+
+        IF direction == "north" THEN
+            currentLocation.y = currentLocation.y + 1
+        ELSE IF direction == "south" THEN
+            currentLocation.y = currentLocation.y - 1
+        ELSE IF direction == "east" THEN
+            currentLocation.x = currentLocation.x + 1
+        ELSE IF direction == "west" THEN
+            currentLocation.x = currentLocation.x - 1
+        ELSE
+            PRINT "Invalid. Please enter north, south, east, or west."
+        ENDIF
+        
+        IF currentLocation == targetLocation THEN
+            PRINT "You found them!"
+        ENDIF
+    ENDWHILE
+END MappingWalkingApp
