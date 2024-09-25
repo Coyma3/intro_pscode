@@ -2,3 +2,24 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+BEGIN GuessingGame
+    SET secretNumber = RANDOM(1, 10)
+    SET attempts = 3
+    
+    WHILE attempts > 0
+        PRINT "Guess a number between 1 and 10:"
+        INPUT userGuess
+        
+        IF userGuess == secretNumber THEN
+            PRINT "Congratulations! You win!"
+            EXIT
+        ELSE
+            PRINT "Let’s try again!"
+            DECREMENT attempts
+            IF attempts > 0 THEN
+                PRINT attempts + " attempts left."
+            ELSE
+                PRINT "Better luck next time! The correct number was " + secretNumber + "."
+        ENDIF
+    ENDWHILE
+END GuessingGame
